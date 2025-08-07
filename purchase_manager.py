@@ -12,7 +12,7 @@ with st.form("purchase_form", clear_on_submit=True):
     col1, col2 = st.columns(2)
     with col1:
         item_name = st.text_input("Item Name")
-        quantity = st.number_input("Quantity (kg)", min_value=0)
+        quantity = st.number_input("Quantity (kg)", min_value=0.1 , format="%.1f")
     with col2:
         purchase_price = st.number_input("Purchase Price per kg", min_value=0)
         margin_type = st.selectbox("Profit Margin Type", ["Fixed Amount", "%"])
